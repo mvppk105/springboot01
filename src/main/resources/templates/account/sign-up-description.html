@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobalIT</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+  Sign Up Page 입니다
+  <br><b>프로젝트 내에서의 html 파일 경로</b> : templates/account/sign-up.html
+  <br>이 페이지는 주소표시줄에 localhost:8080/sign-up 이라고 입력하면 표시됩니다
+  <br><b>/sign-up  <-- localhost:8080/sign-up 과 같은 의미입니다</b>
+  <br>주소표시줄에 localhost:8080/sign-up 이라고 입력하면
+  <br> SpringFramework 가 @GetMapping("/sign-up") 을 인식해서
+  <br>AccountController 클래스의 signUpForm(Model model) 메소드가 자동으로 호출됩니다
+  <br><pre>
+  @GetMapping("/sign-up")
+  public String signUpForm(Model model){
+    return "account/sign-up";
+  }</pre>
+  <br>signUpForm(Model model) 메소드의 return 값
+  <br>return "account/sign-up" 의 의미는
+  <br>localhost:8080/sign-up 요청이 들어오면
+  <br>templates/account/sign-up.html 파일을 보여준다는 의미입니다
+</body>
+</html>
